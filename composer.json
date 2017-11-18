@@ -1,0 +1,35 @@
+{
+    "name": "layui-yii/widgets",
+    "description":"layui结合yii封装成widgets",
+    "keywords":["layui","yii","widgets"],
+    "homepage":"https://github.com/CoderShawnZhang",
+    "license":"MIT",
+    "authors": [
+        {
+            "name": "张洪波",
+            "email": "zhanghongbo@anlewo.com"
+        }
+    ],
+    "support":{
+        "email":"taobao1875@163.com"
+    },
+    "minimum-stability":"dev",
+    "require":{
+        "php":">=5.4.0"
+    },
+    "require": {
+        "yiisoft/yii2": "~2.0.6",
+        "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*"
+    },
+    "autoload":{
+        "psr-4":{
+            "Layui\\Widgets\\":"src/"
+        }
+    },
+    "repositories":{
+        "packagist":{
+            "type":"composer",
+            "url":"https://packagist.phpcomposer.com"
+        }
+    }
+}
