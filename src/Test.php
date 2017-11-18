@@ -6,12 +6,12 @@
  * Time: 下午12:13
  */
 
-namespace Layui\Widgets\src;
+namespace Layui\Widgets;
 
 
 class Test
 {
     public function t(){
-        echo 12123;
+        echo 11111;
     }
 }

@@ -9,5 +9,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 
-$a = new \Layui\Widgets\src\Test();
+$a = new \Layui\Widgets\Test();
 echo $a->t();
+
+$progress = \Layui\Widgets\Progress::widget();
+echo $progress;
