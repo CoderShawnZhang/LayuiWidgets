@@ -13,6 +13,7 @@
     "support":{
         "email":"taobao1875@163.com"
     },
+    "minimum-stability":"master",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2-bootstrap": "^2.0@dev"
