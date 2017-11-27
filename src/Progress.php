@@ -17,6 +17,7 @@ class Progress extends Widget
     public $label;
     public $percent;
     public $showpercent = false;
+    public $type = '';
 
     public $options=[];
 
@@ -31,9 +32,12 @@ class Progress extends Widget
         if($this->showpercent) {
             $defaultOptions['lay-showpercent'] = 'true';
         }
+        if($this->type == 'big'){
+            $defaultOptions['class'] = ' layui-progress-big';
+        }
 
         $this->options = array_merge($defaultOptions, $this->options);
-        Html::addCssClass($this->options, ['widget' => 'layui-progress layui-progress-big']);//外层div 初始class
+        Html::addCssClass($this->options, ['widget' => 'layui-progress']);//外层div 初始class
     }
 
 
@@ -62,11 +66,15 @@ class Progress extends Widget
         ];
 
         $options = array_merge($defaultOptions, $this->barOptions);
-        Html::addCssClass($options, ['widget' => 'layui-progress-bar layui-bg-cyan']);
+        Html::addCssClass($options, ['widget' => 'layui-progress-bar']);
         $out = Html::beginTag('div', $options);
         $out .= $this->label;
+        $typeClass="sr-only";
+        if($this->type != 'big'){
+            $typeClass .= ' layui-progress-text';
+        }
         $out .= Html::tag('span', \Yii::t('yii', '{percent}%', ['percent' => $this->percent]), [
-            'class' => 'sr-only'
+            'class'=>$typeClass
         ]);
         $out .= Html::endTag('div');
         return $out;
