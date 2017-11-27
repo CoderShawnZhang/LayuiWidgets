@@ -7,10 +7,7 @@
  */
 require_once __DIR__ . '/vendor/autoload.php';
 
+//echo \Layui\Widgets\Progress::widget(['percent'=>80,'options'=>[]]);
 
-
-$a = new \Layui\Widgets\Test();
-echo $a->t();
-
-$progress = \Layui\Widgets\Progress::widget();
-echo $progress;
+$t= new \Layui\Widgets\Test();
+echo $t->t();
