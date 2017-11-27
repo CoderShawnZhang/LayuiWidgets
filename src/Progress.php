@@ -18,7 +18,7 @@ class Progress extends Widget
     public $percent;
     public $showpercent = false;
 
-    public $options;
+    public $options=[];
 
     public $barOptions = [];
 
@@ -65,7 +65,7 @@ class Progress extends Widget
         Html::addCssClass($options, ['widget' => 'layui-progress-bar layui-bg-cyan']);
         $out = Html::beginTag('div', $options);
         $out .= $this->label;
-        $out .= Html::tag('span', \Yii::t('yii', '{percent}% Complete', ['percent' => $this->percent]), [
+        $out .= Html::tag('span', \Yii::t('yii', '{percent}%', ['percent' => $this->percent]), [
             'class' => 'sr-only'
         ]);
         $out .= Html::endTag('div');
